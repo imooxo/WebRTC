@@ -1,9 +1,5 @@
 // rts.js : 내 영상 정보 가져오기
 
-// jsdom 라이브러리를 사용하면 Node.js 환경에서 DOM 객체를 시뮬레이션할 수 있다.
-const { JSDOM } = require('jsdom');
-const dom = new JSDOM(`<!DOCTYPE html><html><body></body></html>`);
-global.document = dom.window.document;
 "use strict";
 
 let localVideo = document.getElementById("localVideo");

@@ -1,18 +1,17 @@
 const http = require('http');
-//const os = require('os');
+const os = require('os');
 const socketIO = require('socket.io');
-const nodeStatic = require('node-static');
-// jsdom 라이브러리를 사용하면 Node.js 환경에서 DOM 객체를 시뮬레이션할 수 있다.
-const { JSDOM } = require('jsdom');
-const dom = new JSDOM(`<!DOCTYPE html><html><body></body></html>`);
-global.document = dom.window.document;
 
 let fileServer = new(nodeStatic.Server)();
-let app = http.createServer((req,res)=>{
-    fileServer.serve(req,res);
-}).listen(8080);
+let server = http.createServer((req, res) => {
+    fileServer.serve(req, res);
+});
 
-let io = socketIO.listen(app);
+let io = socketIO(server);
+
+server.listen(8080, () => {
+    console.log('Server listening on port 8080');
+});
 
 /*
     signaling 서버에 대한 구현으로 room이 없다면 생성하고, 
