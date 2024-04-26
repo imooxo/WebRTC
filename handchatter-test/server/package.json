@@ -1,5 +1,5 @@
 {
-  "name": "webrtc_server_client",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,9 +12,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "jsdom": "^24.0.0",
-    "node-static": "^0.7.11",
-    "socket.io": "^4.7.5",
-    "socket.io-client": "^4.7.5"
+    "socket.io": "^4.7.5"
   }
 }

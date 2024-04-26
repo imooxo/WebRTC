@@ -1,15 +1,16 @@
 {
-  "name": "react-ts-webrtc",
+  "name": "webrtc5",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "rtc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.19.2"
+    "node-static": "^0.7.11",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
   }
 }

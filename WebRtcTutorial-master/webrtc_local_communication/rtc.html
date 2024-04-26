@@ -3,20 +3,24 @@
 
 <head>
   <meta charset="UTF-8">
+  <!-- 뷰포트 설정 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 
 <body>
-
-
+  <!-- 데이터를 입력할 텍스트 영역 -->
   <textarea id="dataChannelSend"></textarea>
+  <!-- 데이터를 수신한 내용을 표시할 텍스트 영역 -->
   <textarea id="dataChannelReceive"></textarea>
 
   <div>
+    <!-- 데이터를 전송하는 버튼 -->
     <button id="send">send</button>
   </div>
+  <!-- WebRTC 어댑터 스크립트 -->
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <!-- WebRTC 기능을 구현한 자바스크립트 파일 -->
   <script src="./rtc.js"></script>
 </body>
 
